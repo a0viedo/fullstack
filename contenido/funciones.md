@@ -13,10 +13,10 @@ O funciones inmediatamente invocadas. Por ejemplo:
 (function (){ console.log('hola')})() // "hola"
 ```
 
-Se utilizan para no 'ensuciar' el ámbito global, se crea una función por lo tanto se genera un ámbito dónde se pueden definir variables y funciones que no van a ser compartidas con cualquier otro ámbito que no sea interno.
+Se utilizan para evitar 'ensuciar' el ámbito global, se crea una función por lo tanto se genera un ámbito dónde se pueden definir variables y funciones que no van a ser compartidas con cualquier otro ámbito que no sea interno.
 
 # Parámetros 
-Los parámetros de tipo objeto, siempre son pasados por referencia a las funciones.
+Los parámetros de tipo objeto siempre son pasados por referencia a las funciones.
 Por ejemplo:
 ```js
 function hola(obj) { obj.a = 5;}
@@ -33,7 +33,7 @@ console.log(miNumero.a); // undefined
 ```
 
 # new
-El uso de new se caracteriza por **crear** instancias de *funciones constructoras*. A las funciones constructoras se las diferencia por su nombre empezando con mayúscula.
+El uso de new se caracteriza por **crear** instancias de *funciones constructoras*. A las funciones constructoras se las diferencia, por convención, por su nombre empezando con mayúscula.
 ```js
 function Table(){ this.prop1 = 'abc';}
 var t = new Table();
